@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lương Minh Quân – Founder at DANCHOIMC. Connect on YouTube, Facebook, GitHub and Discord.">
+    <meta name="theme-color" content="#161623">
+    <title>Iziquan</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/fav.png" type="image/png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./style/index.css">
-    <link rel="icon" href="./img/fav.png" type="image/png">
-    <meta name="theme-color" content="#ffffff">
-    <title>Iziquann</title>
 </head>
 <body>
-    <script src="./js/main.js"></script>
-    <div class="loader-container">
-        <div class="loadingio-spinner-ellipsis-gj3qwcimon8">
-            <div class="ldio-lxmyzumg8ar">
+
+    <!-- Loader -->
+    <div class="loader-container" id="loader">
+        <div class="loader-spinner">
+            <div class="ldio">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -27,63 +35,72 @@
             </div>
         </div>
     </div>
-    <div class="loader-container">
-        <div class="loader"></div>
-    </div>
 
-    <div class="shape"></div>
-    <div class="animation-wrapper">
+    <!-- Background decorations -->
+    <div class="shape" aria-hidden="true"></div>
+    <div class="animation-wrapper" aria-hidden="true">
         <div class="particle particle-1"></div>
         <div class="particle particle-2"></div>
         <div class="particle particle-3"></div>
         <div class="particle particle-4"></div>
     </div>
-    <div class="profile-container">
+
+    <!-- Profile Card -->
+    <main class="profile-container">
         <div class="img-container">
-            <img src="./img/mq.jpg" alt="profile image">
-        </div> 
-        <p class="info full-name">Lương Minh Quân</p>
+            <img src="./img/mq.jpg" alt="Ảnh đại diện của Lương Minh Quân" loading="lazy">
+        </div>
+
+        <h1 class="full-name">Lương Minh Quân</h1>
+
         <p class="info role">
-            <i class="fa-solid fa-briefcase"></i>
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
             Founder at DANCHOIMC
         </p>
-        <p class="info">
-            <i>
-                "Never give up. Today is hard, tomorrow will be worse, but the day after tomorrow will be sunshine"
-            </i>
-        </p>
-        <p class="info location">
-            <i class="fa-solid fa-location-dot"></i>
-            Ho Chi Minh City - Vietnam
-        </p>
-        <p class="info place">
-            <i class="fa-solid fa-splotch"></i>
-            @Iziquann - He/him 
+
+        <p class="info quote">
+            <i>"Never give up. Today is hard, tomorrow will be worse,<br>but the day after tomorrow will be sunshine"</i>
         </p>
 
-        <div class="social-container">
-            <a href="https://www.youtube.com/@Iziquann" target="_blank" rel="noopener noreferrer">                
-                <button class="youtube">
-                    <i class="fab fa-youtube"></i>
+        <p class="info location">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Ho Chi Minh City – Vietnam
+        </p>
+
+        <p class="info place">
+            <i class="fa-solid fa-splotch" aria-hidden="true"></i>
+            @Iziquan · He/him
+        </p>
+
+        <div class="social-container" role="list">
+            <a href="https://www.youtube.com/@iziquan" target="_blank" rel="noopener noreferrer" aria-label="YouTube" role="listitem">
+                <button class="btn-social youtube" id="btn-youtube" type="button">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
                 </button>
             </a>
-            <a href="https://www.facebook.com/iziquann" target="_blank" rel="noopener noreferrer">
-                <button class="facebook">
-                    <i class="fab fa-facebook"></i>
+            <a href="https://www.facebook.com/iziquann" target="_blank" rel="noopener noreferrer" aria-label="Facebook" role="listitem">
+                <button class="btn-social facebook" id="btn-facebook" type="button">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
                 </button>
             </a>
-            <a href="https://github.com/iziquan" target="_blank" rel="noopener noreferrer">
-                <button class="discord">
-                    <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/iziquan" target="_blank" rel="noopener noreferrer" aria-label="GitHub" role="listitem">
+                <button class="btn-social github" id="btn-github" type="button">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                 </button>
             </a>
-            <a href="https://danchoimc.com/" target="_blank" rel="noopener noreferrer">
-                <button class="danchoi">
-                    <i class="fa-solid fa-server"></i>
+            <a href="https://danchoimc.cloud/" target="_blank" rel="noopener noreferrer" aria-label="DanChoiMC Server" role="listitem">
+                <button class="btn-social danchoi" id="btn-danchoi" type="button">
+                    <i class="fa-solid fa-server" aria-hidden="true"></i>
                 </button>
             </a>
         </div>
-        <button onclick="location.href='https://discord.gg/hWRcxJFd8k';" class="action">Join Discord!</button>
-    </div>
+
+        <a href="https://discord.gg/hWRcxJFd8k" target="_blank" rel="noopener noreferrer" class="btn-action" id="btn-discord">
+            Join Discord!
+        </a>
+    </main>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
 </body>
 </html>
