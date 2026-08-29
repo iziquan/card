@@ -60,12 +60,23 @@ body {
     justify-content: center;
     background-color: var(--color-bg);
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    /* CSS fallback: auto-hide after 3s even without JS */
+    animation: loaderAutoHide 0.5s ease 3s forwards;
 }
 
 .loader-container.hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    animation: none;
+}
+
+@keyframes loaderAutoHide {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 /* Ellipsis spinner */
