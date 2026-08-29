@@ -49,8 +49,17 @@ body {
 }
 
 /* ============================================================
-   LOADER
+   LOADER — pure CSS, không cần JS
+   Loader tự ẩn sau ~1.7s và reveal nội dung
    ============================================================ */
+
+/* 1. Loader fade out sau 1.2s delay (spinner chạy đủ) */
+@keyframes loaderHide {
+    0%   { opacity: 1; visibility: visible; }
+    90%  { opacity: 0; visibility: visible; }
+    100% { opacity: 0; visibility: hidden;  pointer-events: none; }
+}
+
 .loader-container {
     position: fixed;
     inset: 0;
@@ -59,24 +68,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--color-bg);
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-    /* CSS fallback: auto-hide after 3s even without JS */
-    animation: loaderAutoHide 0.5s ease 3s forwards;
-}
-
-.loader-container.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    animation: none;
-}
-
-@keyframes loaderAutoHide {
-    to {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
+    animation: loaderHide 0.5s ease 1.4s forwards;
 }
 
 /* Ellipsis spinner */
@@ -136,6 +128,20 @@ body {
     50%  { background: #B388EB; }
     75%  { background: #8093F1; }
     100% { background: #72DDF7; }
+}
+
+/* ============================================================
+   PAGE ENTRANCE — card xuất hiện sau khi loader ẩn
+   ============================================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ============================================================
@@ -216,6 +222,7 @@ body::after {
     border-left: 1px solid var(--color-card-border);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
+    animation: fadeInUp 0.6s ease 1.6s both;
 }
 
 /* ============================================================
